@@ -1,1 +1,181 @@
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x82e: file p3original.c, line 31.
+(gdb) r
+Starting program: /home/runner/Test3Session1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p3original.c:31
+31  {
+(gdb) n
+33      input(&n,&r);
+(gdb) s
+input (n=0x7ffd0976f9ac, r=0x7ffd0976f9b0) at p3original.c:4
+4       printf("Enter the values of n and r:");
+(gdb) n
+5       scanf("%d %d",n,r);
+(gdb) n
+Enter the values of n and r:5 3
+6   }
+(gdb) n
+main () at p3original.c:34
+34      result=ncr(n,r);
+(gdb) s
+ncr (n=5, r=3) at p3original.c:9
+9       int result,d,n1=1,r1=1,d1=1;
+(gdb) n
+10      d=n-r;
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+13          n1=n1*j;
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+13          n1=n1*j;
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+13          n1=n1*j;
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+13          n1=n1*j;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+13          n1=n1*j;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+11      for(int j=1;j<=n;j++)
+(gdb) n
+15      for(int h=1;h<=r;h++)
+(gdb) n
+17          r1=r1*h;
+(gdb) n
+15      for(int h=1;h<=r;h++)
+(gdb) n
+17          r1=r1*h;
+(gdb) n
+15      for(int h=1;h<=r;h++)
+(gdb) n
+17          r1=r1*h;
+(gdb) n
+15      for(int h=1;h<=r;h++)
+(gdb) n
+19      for(int k=1;k<=d;k++)
+(gdb) n
+21          d1=d1*k;
+(gdb) n
+19      for(int k=1;k<=d;k++)
+(gdb) n
+21          d1=d1*k;
+(gdb) n
+19      for(int k=1;k<=d;k++)
+(gdb) n
+23      result=n1/(r1*d1);
+(gdb) n
+24      return result;
+(gdb) n
+25  }
+(gdb) n
+main () at p3original.c:35
+35      output(n,r,result);
+(gdb) s
+output (n=5, r=3, result=10) at p3original.c:28
+28      printf("value of %dC%d is %d\n",n,r,result);
+(gdb) n
+value of 5C3 is 10
+29  }
+(gdb) n
+main () at p3original.c:36
+36      return 0;
+(gdb) n
+37  }(gdb) #include<stdio.h>
+(gdb) void input(int *n,int *r)
+Undefined command: "void".  Try "help".
+(gdb) {
+Undefined command: "".  Try "help".
+(gdb)     printf("Enter the values of n and r:");
+Bad format string, missing '"'.
+(gdb)     scanf("%d %d",n,r);
+Undefined command: "scanf".  Try "help".
+(gdb) }
+Undefined command: "".  Try "help".
+(gdb) int ncr(int n,int r)
+Ambiguous command "int ncr(int n,int r)": internals, interpreter-exec, interrupt.
+(gdb) {
+Undefined command: "".  Try "help".
+(gdb)     int result,d,n1=1,r1=1,d1=1;
+Ambiguous command "int result,d,n1=1,r1=1,d1=1;": internals, interpreter-exec, interrupt.
+(gdb)     d=n-r;
+warning: bad breakpoint number at or near '0'
+(gdb)     for(int j=1;j<=n;j++)
+11      for(int j=1;j<=n;j++)
+(gdb)     {
+Undefined command: "".  Try "help".
+(gdb)         n1=n1*j;
+Undefined command: "n1".  Try "help".
+(gdb)     }
+Undefined command: "".  Try "help".
+(gdb)     for(int h=1;h<=r;h++)
+15      for(int h=1;h<=r;h++)
+(gdb)     {
+Undefined command: "".  Try "help".
+(gdb)         r1=r1*h;
+Undefined command: "r1".  Try "help".
+(gdb)     }
+Undefined command: "".  Try "help".
+(gdb)     for(int k=1;k<=d;k++)
+19      for(int k=1;k<=d;k++)
+(gdb)     {
+Undefined command: "".  Try "help".
+(gdb)         d1=d1*k;
+Undefined command: "d1".  Try "help".
+(gdb)     }
+Undefined command: "".  Try "help".
+(gdb)     result=n1/(r1*d1);
+Undefined command: "result".  Try "help".
+(gdb)     return result;
+Invalid character ';' in expression.
+(gdb) }
+Undefined command: "".  Try "help".
+(gdb) void output(int n,int r,int result)
+Undefined command: "void".  Try "help".
+(gdb) {
+Undefined command: "".  Try "help".
+(gdb)     printf("value of %dC%d is %d\n",n,r,result);
+Bad format string, missing '"'.
+(gdb) }
+Undefined command: "".  Try "help".
+(gdb) int main()
+Ambiguous command "int main()": internals, interpreter-exec, interrupt.
+(gdb) {
+Undefined command: "".  Try "help".
+(gdb)     int n,r,result;
+Ambiguous command "int n,r,result;": internals, interpreter-exec, interrupt.
+(gdb)     input(&n,&r);
+Undefined command: "input".  Try "help".
+(gdb)     result=ncr(n,r);
+Undefined command: "result".  Try "help".
+(gdb)     output(n,r,result);
+Invalid character ';' in expression.
+(gdb)     return 0;
+}

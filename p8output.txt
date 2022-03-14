@@ -1,1 +1,46 @@
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x971: file p8original.c, line 69.
+(gdb) r
+Starting program: /home/runner/Test3Session1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p8original.c:69
+69  {
+(gdb) n
+72    n=number();
+(gdb) n
+Enter the number of fraction you want to add:3
+73    input_n_fraction(n,f);
+(gdb) n
+Enter the numerator and denomenator of the fraction:1 2
+Enter the numerator and denomenator of the fraction:1 3
+Enter the numerator and denomenator of the fraction:1 4
+74    sum=add_n_fraction(n,f);
+(gdb) n
+75    output(sum);
+(gdb) s
+output (sum=...) at p8original.c:66
+66    printf("sum of the fraction is:%d/%d\n",sum.num,sum.den);
+(gdb) n
+sum of the fraction is:13/12
+67  }
+(gdb) n
+main () at p8original.c:76
+76    return 0;
+(gdb) n
+77  }(gdb) 
